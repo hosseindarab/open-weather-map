@@ -33,6 +33,7 @@ async function getWeatherData(req, res) {
         });
     } catch (err) {
         console.error(err.message);
+        res.status(500).send({ "status": "ko", "error": err.message });
     }
 }
 
